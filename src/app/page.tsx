@@ -1,3 +1,5 @@
+import { FluidArrowRight } from "@/components/FluidArrow";
+
 export default function Home() {
 	return (
 		<main className="min-h-screen bg-zinc-900 overflow-x-hidden font-sans relative">
@@ -172,38 +174,32 @@ export default function Home() {
 								{/* Background glow & textures */}
 								<div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(16,185,129,0.15),transparent_60%)]"></div>
 
-								{/* Massive background watermark */}
-								<div className="absolute bottom-4 left-8 md:bottom-8 md:left-12 text-[8rem] md:text-[14rem] font-black text-zinc-900/20 leading-none select-none tracking-tighter mix-blend-overlay">
-									CREATOR
-								</div>
+								{/* Massive background watermark removed per user request */}
 
 								<div className="flex w-full h-full pt-[25%] md:pt-[12%] pb-[15%] md:pb-[12%] px-8 md:px-24 z-10">
-									<div className="flex flex-col md:flex-row w-full gap-16 md:gap-24 items-end">
-
-										{/* Left side: Intro & Philosophy */}
-										<div className="flex-1 flex flex-col justify-end pb-12 md:pb-16">
-											<div className="flex items-center gap-4 mb-6 md:mb-8">
-												<div className="w-8 md:w-12 h-[2px] bg-emerald-500"></div>
-												<span className="text-emerald-500 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">The Architect</span>
-											</div>
-											<p className="text-zinc-300 text-lg md:text-2xl font-light leading-relaxed">
-												I bridge the gap between <span className="font-bold text-white relative inline-block group">visionary design<span className="absolute -bottom-1 left-0 w-full h-[1px] bg-emerald-500/50 group-hover:bg-emerald-400 transition-colors"></span></span> and <span className="font-bold text-white relative inline-block group">flawless engineering<span className="absolute -bottom-1 left-0 w-full h-[1px] bg-emerald-500/50 group-hover:bg-emerald-400 transition-colors"></span></span>. My work focuses on creating digital experiences that are as mathematically precise as they are visually breathtaking.
-											</p>
-
-											{/* Elegant Quote Block */}
-											<div className="mt-12 md:mt-16 border-l-2 border-emerald-500/30 pl-6 md:pl-8">
-												<p className="text-zinc-500 italic text-sm md:text-base font-light tracking-wide leading-relaxed">
-													&quot;Engineering is not just about writing code.<br className="hidden md:block" /> It&apos;s about constructing realities.&quot;
-												</p>
-												<div className="mt-4 flex items-center gap-3">
-													<div className="w-4 h-[1px] bg-emerald-500/50"></div>
-													<div className="text-[10px] tracking-widest text-zinc-400 font-mono uppercase">Saahil — 2026</div>
-												</div>
-											</div>
+									<div className="flex flex-col w-full h-full items-start justify-start gap-6 md:gap-8">
+										<div className="flex items-center gap-4">
+											<div className="w-20 h-0.5 md:h-0.25 bg-emerald-500"></div>
+											<h2 className="text-zinc-300 font-mono tracking-[0.2em] uppercase text-sm md:text-base">
+												About Me
+											</h2>
 										</div>
+										<p className="text-zinc-400 text-lg md:text-2xl font-light leading-relaxed max-w-3xl">
+											I am a passionate Full Stack Developer who thrives at the intersection of complex engineering and pristine design. I build robust, scalable, and visually striking applications that bring ambitious ideas to life.
+										</p>
+										{/* CTA Button */}
+										<button className="group mt-6 relative inline-flex items-center gap-2 px-6 py-5.5 rounded-full bg-emerald-500 text-zinc-950 overflow-hidden cursor-pointer focus:outline-none shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] transition-shadow duration-300">
+											{/* White Sweep Fill */}
+											<div className="absolute inset-0 bg-white origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.5,0,0,1)] rounded-full"></div>
+											
+											<span className="relative z-10 text-base font-medium tracking-wide">
+												Let's Talk
+											</span>
 
-										{/* Right side removed for now, reserved for future content */}
-
+											<div className="relative z-10 transform transition-all duration-500 ease-[cubic-bezier(0.5,0,0,1)]">
+												<FluidArrowRight size={20} className="text-zinc-950" />
+											</div>
+										</button>
 									</div>
 								</div>
 							</div>
