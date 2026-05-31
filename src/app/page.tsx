@@ -13,18 +13,21 @@ export default function Home() {
 					<clipPath id="next-shape" clipPathUnits="objectBoundingBox">
 						<path d="M 0.04,0.18 L 0.535,0.18 Q 0.565,0.18 0.565,0.12 Q 0.565,0.06 0.595,0.06 L 0.96,0.06 Q 1,0.06 1,0.15 L 1,0.91 Q 1,1 0.96,1 L 0.40,1 Q 0.38,1 0.38,0.955 Q 0.38,0.91 0.36,0.91 L 0.04,0.91 Q 0,0.91 0,0.82 L 0,0.27 Q 0,0.18 0.04,0.18 Z" />
 					</clipPath>
+					<clipPath id="third-shape" clipPathUnits="objectBoundingBox">
+						<path d="M 0.04,0 L 0.345,0 Q 0.365,0 0.365,0.03 Q 0.365,0.06 0.385,0.06 L 0.96,0.06 Q 1,0.06 1,0.12 L 1,0.94 Q 1,1 0.96,1 L 0.04,1 Q 0,1 0,0.94 L 0,0.06 Q 0,0 0.04,0 Z" />
+					</clipPath>
 				</defs>
 			</svg>
 
 			<div className="w-full flex flex-col items-center pt-[4vh] md:pt-[8vh] px-4 md:px-8 pb-20">
 				{/* Hero Section */}
-				<section className="relative w-full max-w-[190vh]">
+				<section className="relative z-30 w-full max-w-[170vh]">
 					{/* Hero Container */}
 					<div className="relative w-full aspect-[2.2/0.98]">
 						{/* The Clipped Red Shape with Shadow */}
-						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl">
+						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
 							<div
-								className="w-full h-full bg-zinc-800 relative overflow-hidden"
+								className="w-full h-full bg-zinc-800 relative overflow-hidden pointer-events-auto"
 								style={{ clipPath: 'url(#hero-shape)' }}
 							>
 								{/* Background decorative elements */}
@@ -38,21 +41,11 @@ export default function Home() {
 								<div className="absolute w-1.5 h-1.5 rounded-full bg-emerald-400/30 top-[60%] left-[15%] animate-[ping_4s_infinite] pointer-events-none"></div>
 								<div className="absolute w-2 h-2 rounded-full bg-lime-400/20 bottom-[40%] right-[10%] animate-[ping_5s_infinite] pointer-events-none" style={{ animationDelay: '1.5s' }}></div>
 
-								{/* Vertical Scroll Indicator */}
-								<div className="absolute bottom-8 lg:bottom-12 left-8 md:left-24 lg:left-32 xl:left-40 z-20 hidden md:flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
-									<div className="flex flex-col items-center gap-3">
-										<span className="text-[10px] font-mono tracking-[0.3em] text-zinc-300/70 uppercase select-none" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
-										<div className="w-px h-12 bg-emerald-500/20 flex flex-col justify-start">
-											<div className="w-full h-1/3 bg-emerald-400 rounded-full animate-bounce"></div>
-										</div>
-									</div>
-								</div>
-
 								{/* Inner Content - Advanced Layout */}
-								<div className="w-full h-full flex flex-col lg:flex-row items-center justify-between relative z-20 px-8 md:px-24 lg:px-32 xl:px-40">
+								<div className="w-full h-full flex flex-col lg:flex-row items-center justify-between relative z-20 px-8 md:px-16 lg:px-24 xl:px-32">
 
 									{/* Left Column: Intro & Experience */}
-									<div className="flex flex-col max-w-3xl w-full relative z-10 pt-12 lg:pt-0">
+									<div className="flex flex-col max-w-2xl xl:max-w-3xl w-full relative z-10 pt-12 lg:pt-0">
 										<div className="flex flex-wrap items-center gap-4 mb-4 md:mb-6">
 											<div className="flex items-center gap-4">
 												<div className="h-px w-8 md:w-16 bg-emerald-400"></div>
@@ -62,26 +55,25 @@ export default function Home() {
 
 										<div className="relative">
 											{/* Decorative background text */}
-											<h1 className="absolute -top-12 -left-4 text-[6rem] md:text-[10rem] font-black text-zinc-800/40 select-none pointer-events-none -z-10 tracking-tighter">
+											<h1 className="absolute -top-10 -left-4 text-[5rem] md:text-[8rem] xl:text-[10rem] font-black text-zinc-800/40 select-none pointer-events-none -z-10 tracking-tighter">
 												HELLO
 											</h1>
-											<h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-2 tracking-tight">
+											<h2 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-light text-white mb-2 tracking-tight">
 												Hello, I am
 											</h2>
-											<h1 className="text-6xl md:text-7xl lg:text-[7rem] xl:text-[8rem] font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-emerald-500 tracking-tighter leading-[0.9] -ml-1 md:-ml-2 drop-shadow-lg pb-2">
+											<h1 className="text-5xl md:text-7xl lg:text-[6rem] xl:text-[8rem] font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-emerald-500 tracking-tighter leading-[0.9] -ml-1 md:-ml-2 drop-shadow-lg pb-2">
 												Saahil.
 											</h1>
 										</div>
 
 										<div className="mt-8 md:mt-12 relative w-fit group">
 											{/* The "Line Cut" Border Container */}
-											<div className="border border-emerald-500/30 rounded-xl px-6 md:px-8 py-5 md:py-6 group-hover:border-emerald-400/60 transition-colors duration-500 flex items-center gap-6 md:gap-10">
-												<span className="text-2xl md:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase">
-													Full Stack <br className="hidden sm:block md:hidden" />
-													<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-lime-300">Developer</span>
+											<div className="border border-emerald-500/30 rounded-xl px-6 md:px-8 py-4 md:py-6 group-hover:border-emerald-400/60 transition-colors duration-500 flex items-center gap-6 md:gap-10">
+												<span className="text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-black text-white tracking-tight uppercase">
+													Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-lime-300">Developer</span>
 												</span>
 
-												<div className="hidden sm:flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-zinc-900/40 border border-emerald-500/30 group-hover:rotate-12 group-hover:border-emerald-400/60 transition-all duration-500 relative z-10">
+												<div className="hidden sm:flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-zinc-900/40 border border-emerald-500/30 group-hover:rotate-12 group-hover:border-emerald-400/60 transition-all duration-500 relative z-10 shrink-0">
 													<svg className="w-6 h-6 md:w-8 md:h-8 text-lime-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
 													</svg>
@@ -101,14 +93,14 @@ export default function Home() {
 
 										{/* Buttons */}
 										<div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-8 mt-8 md:mt-10">
-											<button className="group cursor-pointer relative flex items-center h-10 md:h-12 pr-6 md:pr-8 rounded-full focus:outline-none">
-												<div className="absolute left-0 top-0 h-full w-10 md:w-12 bg-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.5,0,0,1)] group-hover:w-full shadow-[0_0_20px_rgba(255,255,255,0.15)] group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)]"></div>
+											<button className="group cursor-pointer relative inline-flex items-center h-10 md:h-12 rounded-full focus:outline-none bg-transparent">
+												<div className="absolute left-0 top-0 h-full w-10 md:w-12 bg-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.5,0,0,1)] group-hover:!w-full shadow-[0_0_20px_rgba(255,255,255,0.15)] group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)]"></div>
 												<div className="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 z-10 shrink-0">
 													<svg className="w-4 h-4 md:w-5 md:h-5 text-zinc-950 transition-transform duration-500 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
 													</svg>
 												</div>
-												<span className="relative z-10 ml-2 md:ml-3 font-bold uppercase tracking-[0.15em] text-[11px] md:text-xs text-white group-hover:text-zinc-950 transition-colors duration-500">
+												<span className="relative z-10 ml-2 md:ml-3 pr-6 md:pr-8 font-bold uppercase tracking-[0.15em] text-[11px] md:text-xs text-white group-hover:text-zinc-950 transition-colors duration-500 whitespace-nowrap">
 													Download Resume
 												</span>
 											</button>
@@ -116,8 +108,8 @@ export default function Home() {
 									</div>
 
 									{/* Right Column: Complex Photo Layout */}
-									<div className="relative w-full lg:w-auto flex justify-center lg:justify-end mt-16 lg:mt-0 translate-x-4 lg:translate-x-8 xl:translate-x-12">
-										<div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 group">
+									<div className="relative w-full lg:w-auto flex justify-center lg:justify-end mt-16 lg:mt-0 shrink-0">
+										<div className="relative w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 group">
 											{/* Background offset shape */}
 											<div className="absolute top-4 -right-4 md:top-6 md:-right-6 w-full h-full bg-emerald-500/20 transition-transform duration-1000 lg:group-hover:translate-x-2 lg:group-hover:-translate-y-2" style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%)' }}></div>
 
@@ -157,30 +149,24 @@ export default function Home() {
 						</div>
 
 						{/* Top-Right Clipped Negative Space: Text Navigation */}
-						<div className="absolute z-10" style={{ top: '0', right: '0' }}>
-							<nav className="absolute top-4 right-4 md:top-6 md:right-8 bg-zinc-800/80 shadow-[0_8px_30px_rgba(9,9,11,0.5)] border border-zinc-700/50 rounded-full px-8 py-4 flex items-center justify-center gap-8 md:gap-10 backdrop-blur-md whitespace-nowrap">
-								<a href="#" className="relative group text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 transition-colors">
-									<span className="relative z-10">Home</span>
-									<span className="absolute -bottom-2 left-0 w-full h-[2px] bg-emerald-400 rounded-full shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+						<nav className="absolute z-10 top-6 right-6 md:top-8 md:right-20 bg-zinc-800/80 shadow-[0_8px_30px_rgba(9,9,11,0.5)] border border-zinc-700/50 rounded-full px-6 py-3 md:px-8 md:py-4 flex items-center justify-center gap-6 md:gap-10 backdrop-blur-md whitespace-nowrap max-w-[calc(100vw-2rem)] overflow-x-auto no-scrollbar">
+							{["About", "Skills", "Projects", "Testimonials", "Contact"].map((item) => (
+								<a key={item} href="#" className="relative group text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors duration-300">
+									<span className="relative z-10">{item}</span>
+									{/* <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white rounded-full transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_rgba(255,255,255,0.5)]"></span> */}
 								</a>
-								{["About", "Skills", "Projects", "Testimonials", "Contact"].map((item) => (
-									<a key={item} href="#" className="relative group text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors duration-300">
-										<span className="relative z-10">{item}</span>
-										<span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-white rounded-full transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100 shadow-[0_0_8px_rgba(255,255,255,0.5)]"></span>
-									</a>
-								))}
-							</nav>
-						</div>
+							))}
+						</nav>
 					</div>
 				</section>
 
 				{/* Next Section (e.g., Projects/About) */}
-				<section className="relative w-full max-w-[190vh] -mt-[6.5%]">
+				<section className="relative z-20 w-full max-w-[170vh] -mt-[6%]">
 					<div className="relative w-full aspect-[2.2/0.98]">
 						{/* The Clipped Red Shape with Shadow */}
-						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl">
+						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
 							<div
-								className="w-full h-full bg-zinc-800 relative overflow-hidden flex"
+								className="w-full h-full bg-zinc-800 relative overflow-hidden flex pointer-events-auto"
 								style={{ clipPath: 'url(#next-shape)' }}
 							>
 								{/* Background glow & textures */}
@@ -207,7 +193,7 @@ export default function Home() {
 											{/* Elegant Quote Block */}
 											<div className="mt-12 md:mt-16 border-l-2 border-emerald-500/30 pl-6 md:pl-8">
 												<p className="text-zinc-500 italic text-sm md:text-base font-light tracking-wide leading-relaxed">
-													"Engineering is not just about writing code.<br className="hidden md:block" /> It's about constructing realities."
+													&quot;Engineering is not just about writing code.<br className="hidden md:block" /> It&apos;s about constructing realities.&quot;
 												</p>
 												<div className="mt-4 flex items-center gap-3">
 													<div className="w-4 h-[1px] bg-emerald-500/50"></div>
@@ -219,6 +205,137 @@ export default function Home() {
 										{/* Right side removed for now, reserved for future content */}
 
 									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* Third Section */}
+				<section className="relative z-10 w-full max-w-[170vh] -mt-[2.5%]">
+					<div className="relative w-full aspect-[2.2/1.5]">
+						{/* The Clipped Red Shape with Shadow */}
+						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
+							<div
+								className="w-full h-full bg-zinc-800 relative overflow-hidden flex pointer-events-auto"
+								style={{ clipPath: 'url(#third-shape)' }}
+							>
+								{/* Background textures */}
+								<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.05),transparent_50%)]"></div>
+
+								<div className="flex flex-col w-full h-full pt-[12%] pb-[8%] px-8 md:px-24 z-10 justify-center gap-12 md:gap-20">
+
+									{/* Top Half: What I Do */}
+									<div className="flex flex-col md:flex-row w-full gap-8 md:gap-24 items-center">
+
+										{/* Left Side: Title */}
+										<div className="flex-1 flex flex-col items-start justify-center">
+											<div className="flex items-center gap-4 mb-6">
+												<div className="w-8 md:w-12 h-[2px] bg-emerald-500"></div>
+												<span className="text-emerald-500 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Capabilities</span>
+											</div>
+											<h2 className="text-5xl md:text-[6rem] font-black text-white leading-[0.9] uppercase tracking-tighter opacity-90">
+												What<br />
+												<span className="text-zinc-600 italic">I Do</span>
+											</h2>
+											<p className="text-zinc-400 mt-6 max-w-xs md:max-w-sm text-sm md:text-base leading-relaxed">
+												Clear guidance, transparent engineering, and a performance-first process designed to reduce technical doubt.
+											</p>
+										</div>
+
+										{/* Right Side: Bento Grid */}
+										<div className="flex-[1.5] w-full flex flex-col justify-center">
+											<div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full">
+
+												{/* Card 1: Wide */}
+												<div className="md:col-span-2 bg-zinc-900/60 border border-zinc-700/30 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/30 transition-colors">
+													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-zinc-800 flex items-center justify-center mb-6 md:mb-8">
+														<svg className="w-5 h-5 md:w-6 md:h-6 text-zinc-400 group-hover:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+														</svg>
+													</div>
+													<div>
+														<h3 className="text-lg md:text-xl font-bold text-zinc-200 mb-2">Frontend Architecture</h3>
+														<p className="text-xs md:text-sm text-zinc-500 font-light">Building scalable, high-performance web applications using cutting-edge frameworks.</p>
+													</div>
+												</div>
+
+												{/* Card 2: Square */}
+												<div className="md:col-span-1 bg-emerald-950/30 border border-emerald-900/50 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/50 transition-colors">
+													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-emerald-900/40 flex items-center justify-center mb-6 md:mb-8">
+														<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+														</svg>
+													</div>
+													<div>
+														<h3 className="text-base md:text-lg font-bold text-zinc-200 mb-2 leading-tight">Systems Engineering</h3>
+														<p className="text-xs text-zinc-500 font-light">Robust data flows.</p>
+													</div>
+												</div>
+
+												{/* Card 3: Square */}
+												<div className="md:col-span-1 bg-emerald-950/30 border border-emerald-900/50 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/50 transition-colors">
+													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-emerald-900/40 flex items-center justify-center mb-6 md:mb-8">
+														<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+														</svg>
+													</div>
+													<div>
+														<h3 className="text-base md:text-lg font-bold text-zinc-200 mb-2 leading-tight">UI/UX Design</h3>
+														<p className="text-xs text-zinc-500 font-light">Pixel-perfect interfaces.</p>
+													</div>
+												</div>
+
+												{/* Card 4: Wide */}
+												<div className="md:col-span-2 bg-zinc-900/60 border border-zinc-700/30 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/30 transition-colors">
+													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-zinc-800 flex items-center justify-center mb-6 md:mb-8">
+														<svg className="w-5 h-5 md:w-6 md:h-6 text-zinc-400 group-hover:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+														</svg>
+													</div>
+													<div>
+														<h3 className="text-lg md:text-xl font-bold text-zinc-200 mb-2">Performance Optimization</h3>
+														<p className="text-xs md:text-sm text-zinc-500 font-light">Auditing and optimizing web applications for maximum speed, accessibility, and SEO.</p>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									{/* Bottom Half: Horizontal Education Timeline */}
+									<div className="w-full flex flex-col">
+										<div className="flex items-center gap-4 mb-8 md:mb-12">
+											<div className="w-8 md:w-12 h-[2px] bg-emerald-500"></div>
+											<span className="text-emerald-500 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Education & Journey</span>
+										</div>
+
+										<div className="relative w-full grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+											{/* Horizontal Line connecting them on desktop */}
+											<div className="hidden md:block absolute top-[24px] left-[16.66%] right-[16.66%] h-[1px] bg-zinc-700/50 -z-10"></div>
+
+											{[
+												{ year: "2018 - 2022", title: "Bachelor of Technology", school: "University of Technology", desc: "Computer Science & Engineering. Core focus on algorithms and data structures." },
+												{ year: "2022 - 2024", title: "Master of Science", school: "Institute of Engineering", desc: "Specialization in Software Architecture and High-Performance Computing." },
+												{ year: "2024 - Present", title: "Industry Expert", school: "Continuous Learning", desc: "Mastering advanced React patterns, WebGL, and System Design." },
+											].map((edu, i) => (
+												<div key={i} className="flex flex-col relative group">
+													{/* Node */}
+													<div className="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-6 group-hover:border-emerald-500 transition-colors duration-500 mx-auto">
+														<div className="w-3 h-3 rounded-full bg-zinc-600 group-hover:bg-emerald-500 transition-colors duration-500"></div>
+													</div>
+
+													<div className="text-center flex flex-col items-center">
+														<span className="text-emerald-500 font-mono text-xs tracking-widest mb-2 block">{edu.year}</span>
+														<h3 className="text-xl font-bold text-zinc-200 mb-1">{edu.title}</h3>
+														<h4 className="text-sm font-medium text-zinc-400 mb-3">{edu.school}</h4>
+														<p className="text-xs md:text-sm text-zinc-500 font-light max-w-xs">{edu.desc}</p>
+													</div>
+												</div>
+											))}
+										</div>
+									</div>
+
 								</div>
 							</div>
 						</div>
