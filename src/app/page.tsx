@@ -71,9 +71,11 @@ export default function Home() {
 										<div className="mt-8 md:mt-12 relative w-fit group">
 											{/* The "Line Cut" Border Container */}
 											<div className="border border-emerald-500/30 rounded-xl px-6 md:px-8 py-4 md:py-6 group-hover:border-emerald-400/60 transition-colors duration-500 flex items-center gap-6 md:gap-10">
-												<span className="text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-black text-white tracking-tight uppercase">
-													Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-lime-300">Developer</span>
-												</span>
+												<div className="flex items-center">
+													<span className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-white tracking-tight uppercase leading-none whitespace-nowrap">
+														Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-lime-300">Developer</span>
+													</span>
+												</div>
 
 												<div className="hidden sm:flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-zinc-900/40 border border-emerald-500/30 group-hover:rotate-12 group-hover:border-emerald-400/60 transition-all duration-500 relative z-10 shrink-0">
 													<svg className="w-6 h-6 md:w-8 md:h-8 text-lime-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

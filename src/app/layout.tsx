@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 import ScrollHUD from "@/components/ScrollHUD";
+import PageTransitionLoader from "@/components/PageTransitionLoader";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,7 +34,9 @@ export default function RootLayout({
         <link href="https://db.onlinewebfonts.com/c/b88ced40599ee76946d2aa71611109b4?family=GT+Flexa+Lt" rel="stylesheet" />
       </head>
       <body className="min-h-full flex flex-col font-sans">
-        {children}
+        <PageTransitionLoader>
+          {children}
+        </PageTransitionLoader>
         <ScrollHUD />
       </body>
     </html>
