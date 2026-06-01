@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background px-6 relative overflow-hidden">
       {/* Subtle Background Accent */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(254, 242, 242, 0.5), transparent)' }}></div>
       
       <motion.div 
         className="max-w-5xl mx-auto w-full z-10"

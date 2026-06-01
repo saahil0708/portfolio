@@ -21,6 +21,15 @@ export default function Home() {
 					<clipPath id="fourth-shape" clipPathUnits="objectBoundingBox">
 						<path d="M 0.04,0 L 0.96,0 Q 1,0 1,0.06 L 1,0.94 Q 1,1 0.96,1 L 0.04,1 Q 0,1 0,0.94 L 0,0.06 Q 0,0 0.04,0 Z" />
 					</clipPath>
+					<clipPath id="skills-shape" clipPathUnits="objectBoundingBox">
+						<path d="M 0.04,0 L 0.96,0 Q 1,0 1,0.06 L 1,0.94 Q 1,1 0.96,1 L 0.30,1 Q 0.28,1 0.28,0.965 Q 0.28,0.93 0.26,0.93 L 0.04,0.93 Q 0,0.93 0,0.87 L 0,0.06 Q 0,0 0.04,0 Z" />
+					</clipPath>
+					<clipPath id="projects-shape" clipPathUnits="objectBoundingBox">
+						<path d="M 0.05,0 L 0.24,0 Q 0.26,0 0.26,0.035 Q 0.26,0.07 0.28,0.07 L 0.95,0.07 Q 1,0.07 1,0.15 L 1,0.92 Q 1,1 0.95,1 L 0.05,1 Q 0,1 0,0.92 L 0,0.08 Q 0,0 0.05,0 Z" />
+					</clipPath>
+					<clipPath id="card-shape" clipPathUnits="objectBoundingBox">
+						<path d="M 0.08,0 L 0.92,0 Q 1,0 1,0.08 L 1,0.76 Q 1,0.84 0.92,0.84 L 0.56,0.84 Q 0.48,0.84 0.48,0.92 Q 0.48,1 0.40,1 L 0.08,1 Q 0,1 0,0.92 L 0,0.08 Q 0,0 0.08,0 Z" />
+					</clipPath>
 				</defs>
 			</svg>
 
@@ -36,8 +45,8 @@ export default function Home() {
 								style={{ clipPath: 'url(#hero-shape)' }}
 							>
 								{/* Background decorative elements */}
-								<div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-								<div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
+								<div className="absolute top-0 right-0 w-[500px] h-[500px] -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.2), transparent)' }}></div>
+								<div className="absolute bottom-0 left-0 w-[600px] h-[600px] translate-y-1/3 -translate-x-1/4 pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(5, 150, 105, 0.1), transparent)' }}></div>
 
 								{/* Ambient Background Particles */}
 								<div className="absolute top-[20%] left-[10%] text-emerald-500/30 text-2xl font-light animate-pulse pointer-events-none select-none">+</div>
@@ -264,7 +273,7 @@ export default function Home() {
 										{/* Item 1: Wide (2 columns) */}
 										<div className="md:col-span-2 bg-zinc-900/60 border border-emerald-500/10 rounded-3xl p-6 md:p-8 hover:border-emerald-500/30 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative shadow-xl backdrop-blur-sm">
 											{/* Subtle background glow */}
-											<div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-[80px] -mr-20 -mt-20 group-hover:bg-emerald-500/10 transition-colors duration-700"></div>
+											<div className="absolute top-0 right-0 w-64 h-64 -mr-20 -mt-20 group-hover:bg-emerald-500/10 transition-colors duration-700" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.05), transparent)' }}></div>
 
 											<div className="flex flex-row justify-between h-full">
 												<div className="flex flex-col justify-between h-full relative z-10 w-2/3">
@@ -322,7 +331,7 @@ export default function Home() {
 										{/* Item 4: Wide (2 columns) */}
 										<div className="md:col-span-2 bg-zinc-900/60 border border-emerald-500/10 rounded-3xl p-6 md:p-8 hover:border-emerald-500/30 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative shadow-xl backdrop-blur-sm">
 											{/* Subtle background glow */}
-											<div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-[80px] -mr-20 -mb-20 group-hover:bg-emerald-500/10 transition-colors duration-700"></div>
+											<div className="absolute bottom-0 right-0 w-64 h-64 -mr-20 -mb-20 group-hover:bg-emerald-500/10 transition-colors duration-700" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.05), transparent)' }}></div>
 
 											<div className="flex flex-row justify-between h-full">
 												<div className="flex flex-col justify-between h-full relative z-10 w-2/3">
@@ -378,8 +387,8 @@ export default function Home() {
 								></div>
 
 								{/* Abstract Ambient Glows */}
-								<div className="absolute top-[-10%] left-[-10%] w-[50%] h-[60%] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
-								<div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[60%] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+								<div className="absolute top-[-10%] left-[-10%] w-[50%] h-[60%] pointer-events-none mix-blend-screen" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.1), transparent)' }}></div>
+								<div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[60%] pointer-events-none mix-blend-screen" style={{ background: 'radial-gradient(circle closest-side, rgba(5, 150, 105, 0.1), transparent)' }}></div>
 
 								{/* Center Faint Watermark */}
 								<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] text-white font-black text-[6rem] md:text-[14rem] tracking-tighter leading-none select-none pointer-events-none whitespace-nowrap">
@@ -484,7 +493,328 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
+
+				{/* Fifth Section - Expertise */}
+				<section className="relative z-0 w-full max-w-[170vh] mt-4 md:mt-8 mb-10 md:mb-2">
+					<div className="relative w-full aspect-auto">
+						{/* Container with Shadow */}
+						<div className="relative w-full filter drop-shadow-2xl pointer-events-none">
+							<div
+								className="w-full bg-zinc-900 relative overflow-hidden flex flex-col pointer-events-auto shadow-[0_0_50px_rgba(16,185,129,0.05)]"
+								style={{ clipPath: 'url(#skills-shape)' }}
+							>
+								{/* Premium Deep Background Layer */}
+								<div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-emerald-950/40 pointer-events-none"></div>
+
+								{/* Ambient Glowing Orbs */}
+								<div className="absolute -top-40 -right-40 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.2), transparent)' }}></div>
+								<div className="absolute -bottom-40 -left-40 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.1), transparent)' }}></div>
+
+								{/* Tech Grid Pattern */}
+								<div
+									className="absolute inset-0 opacity-[0.15] pointer-events-none"
+									style={{
+										backgroundImage: 'linear-gradient(rgba(16, 185, 129, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, 0.4) 1px, transparent 1px)',
+										backgroundSize: '40px 40px',
+										backgroundPosition: 'center center',
+										maskImage: 'radial-gradient(circle at center, black 10%, transparent 80%)',
+										WebkitMaskImage: 'radial-gradient(circle at center, black 10%, transparent 80%)'
+									}}
+								></div>
+
+								{/* Massive Faded Watermark */}
+								<div className="absolute -top-10 left-0 opacity-[0.03] text-white font-black text-[6rem] md:text-[14rem] tracking-tighter leading-none select-none pointer-events-none">
+									SKILLSET
+								</div>
+
+								<div className="flex flex-col w-full pt-12 md:pt-16 pb-16 md:pb-20 px-8 md:px-12 lg:px-24 z-10 justify-start gap-8 md:gap-12">
+									{/* Right Aligned Heading & Subheading */}
+									<div className="flex flex-col gap-3 items-end w-full">
+										<div className="flex w-full items-center justify-end gap-4">
+											<h2 className="text-zinc-300 font-mono tracking-[0.2em] uppercase text-sm md:text-base text-right">
+												My Expertise
+											</h2>
+											<div className="w-16 md:w-20 h-0.5 md:h-0.25 bg-emerald-500"></div>
+										</div>
+										<p className="text-zinc-400 text-sm md:text-base max-w-2xl leading-relaxed text-right">
+											A comprehensive overview of my technical arsenal, organized by domain and proficiency.
+										</p>
+									</div>
+
+									{/* Expertise Pillars Grid */}
+									<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-4 w-full flex-1">
+
+										{/* Pillar 1: Frontend */}
+										<div className="group relative h-full bg-gradient-to-br from-zinc-900/80 to-zinc-900/30 backdrop-blur-md border border-zinc-700/50 hover:border-emerald-500/60 hover:bg-zinc-800/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-700 overflow-hidden flex flex-col p-6 md:p-8"
+											style={{ clipPath: 'polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px)' }}>
+											{/* Hover Glow */}
+											<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-emerald-500/0 via-emerald-500/5 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+											{/* Corner Accent */}
+											<div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+											<div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+
+											{/* Header */}
+											<div className="flex items-center gap-4 mb-8 relative z-10">
+												<div className="w-10 h-10 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center group-hover:bg-emerald-950 group-hover:border-emerald-500/50 transition-colors duration-500 shadow-lg">
+													<svg className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+													</svg>
+												</div>
+												<h3 className="text-lg font-bold text-white tracking-tight group-hover:text-emerald-50 transition-colors">Frontend</h3>
+											</div>
+
+											{/* Skills List */}
+											<div className="flex flex-col gap-3 relative z-10">
+												<TechChip name="React" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" level={5} />
+												<TechChip name="Next.js" iconUrl="https://cdn.simpleicons.org/nextdotjs/white" level={5} />
+												<TechChip name="TypeScript" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" level={4} />
+												<TechChip name="Tailwind CSS" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" level={5} />
+												<TechChip name="Framer Motion" iconUrl="https://cdn.simpleicons.org/framer/white" level={4} />
+												<TechChip name="Figma" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" level={4} />
+											</div>
+										</div>
+
+										{/* Pillar 2: Backend */}
+										<div className="group relative h-full bg-gradient-to-br from-zinc-900/80 to-zinc-900/30 backdrop-blur-md border border-zinc-700/50 hover:border-emerald-500/60 hover:bg-zinc-800/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-700 overflow-hidden flex flex-col p-6 md:p-8"
+											style={{ clipPath: 'polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px)' }}>
+											<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-emerald-500/0 via-emerald-500/5 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+											<div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+											<div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+
+											<div className="flex items-center gap-4 mb-8 relative z-10">
+												<div className="w-10 h-10 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center group-hover:bg-emerald-950 group-hover:border-emerald-500/50 transition-colors duration-500 shadow-lg">
+													<svg className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+													</svg>
+												</div>
+												<h3 className="text-lg font-bold text-white tracking-tight group-hover:text-emerald-50 transition-colors">Backend</h3>
+											</div>
+
+											<div className="flex flex-col gap-3 relative z-10">
+												<TechChip name="Node.js" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" level={5} />
+												<TechChip name="Python" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" level={4} />
+												<TechChip name="Django" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" invertIcon={true} level={3} />
+												<TechChip name="FastAPI" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" level={4} />
+												<TechChip name="Express.js" iconUrl="https://cdn.simpleicons.org/express/white" level={4} />
+												<TechChip name="Redis" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" level={3} />
+											</div>
+										</div>
+
+										{/* Pillar 3: Architecture */}
+										<div className="group relative h-full bg-gradient-to-br from-zinc-900/80 to-zinc-900/30 backdrop-blur-md border border-zinc-700/50 hover:border-emerald-500/60 hover:bg-zinc-800/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-700 overflow-hidden flex flex-col p-6 md:p-8"
+											style={{ clipPath: 'polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px)' }}>
+											<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-emerald-500/0 via-emerald-500/5 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+											<div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+											<div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+
+											<div className="flex items-center gap-4 mb-8 relative z-10">
+												<div className="w-10 h-10 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center group-hover:bg-emerald-950 group-hover:border-emerald-500/50 transition-colors duration-500 shadow-lg">
+													<svg className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+													</svg>
+												</div>
+												<h3 className="text-lg font-bold text-white tracking-tight group-hover:text-emerald-50 transition-colors">Data & Cloud</h3>
+											</div>
+
+											<div className="flex flex-col gap-3 relative z-10">
+												<TechChip name="PostgreSQL" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" level={4} />
+												<TechChip name="MySQL" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" level={4} />
+												<TechChip name="MongoDB" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" level={3} />
+												<TechChip name="Firebase" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" level={4} />
+												<TechChip name="AWS" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" invertIcon={true} level={4} />
+												<TechChip name="Google Cloud" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" level={3} />
+											</div>
+										</div>
+
+										{/* Pillar 4: Design & Tools */}
+										<div className="group relative h-full bg-gradient-to-br from-zinc-900/80 to-zinc-900/30 backdrop-blur-md border border-zinc-700/50 hover:border-emerald-500/60 hover:bg-zinc-800/40 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)] transition-all duration-700 overflow-hidden flex flex-col p-6 md:p-8"
+											style={{ clipPath: 'polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px)' }}>
+											<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-emerald-500/0 via-emerald-500/5 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+											<div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+											<div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-emerald-500/0 group-hover:border-emerald-500/50 transition-colors duration-500"></div>
+
+											<div className="flex items-center gap-4 mb-8 relative z-10">
+												<div className="w-10 h-10 rounded-xl bg-zinc-950 border border-zinc-800 flex items-center justify-center group-hover:bg-emerald-950 group-hover:border-emerald-500/50 transition-colors duration-500 shadow-lg">
+													<svg className="w-5 h-5 text-zinc-400 group-hover:text-emerald-400 transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+													</svg>
+												</div>
+												<h3 className="text-lg font-bold text-white tracking-tight group-hover:text-emerald-50 transition-colors">DevOps & Tools</h3>
+											</div>
+
+											<div className="flex flex-col gap-3 relative z-10">
+												<TechChip name="Docker" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" level={4} />
+												<TechChip name="Kubernetes" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" level={3} />
+												<TechChip name="GitHub Actions" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" invertIcon={true} level={4} />
+												<TechChip name="Linux" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" level={4} />
+												<TechChip name="Git" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" level={5} />
+												{/* <TechChip name="Vite" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" level={4} />
+												<TechChip name="Jest" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" level={3} /> */}
+												<TechChip name="VS Code" iconUrl="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" level={5} />
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* Sixth Section - Projects */}
+				<section className="relative z-0 w-full max-w-[170vh] -mt-10">
+					<div className="relative w-full aspect-auto">
+						<div className="relative w-full filter drop-shadow-2xl pointer-events-none">
+							<div
+								className="w-full bg-zinc-900 relative overflow-hidden flex flex-col pointer-events-auto shadow-[0_0_50px_rgba(16,185,129,0.05)]"
+								style={{ clipPath: 'url(#projects-shape)' }}
+							>
+								{/* Premium Deep Background Layer */}
+								<div className="absolute inset-0 bg-gradient-to-br from-zinc-800/50 via-zinc-900 to-emerald-900/40 pointer-events-none"></div>
+
+								{/* Watermark */}
+								<h1 className="absolute top-10 right-0 lg:-right-10 text-[6rem] md:text-[10rem] xl:text-[14rem] font-black text-zinc-700/30 select-none pointer-events-none z-0 tracking-tighter leading-none">
+									WORK
+								</h1>
+
+								{/* Ambient Glowing Orbs */}
+								<div className="absolute -top-40 -left-40 w-[500px] h-[500px] pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.15), transparent)' }}></div>
+								<div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.1), transparent)' }}></div>
+								<div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.25), transparent)' }}></div>
+
+								{/* Content */}
+								<div className="flex flex-col w-full pt-16 md:pt-24 pb-16 md:pb-20 px-8 md:px-12 lg:px-24 z-10 justify-start gap-8 md:gap-12">
+									{/* Left Aligned Heading */}
+									<div className="flex flex-col gap-3 items-start w-full relative z-10">
+										<div className="flex w-full items-center justify-start gap-4">
+											<div className="w-16 md:w-20 h-0.5 md:h-0.25 bg-emerald-500"></div>
+											<h2 className="text-zinc-300 font-mono tracking-[0.2em] uppercase text-sm md:text-base text-left">
+												Featured Projects
+											</h2>
+										</div>
+										<p className="text-zinc-400 text-sm md:text-base max-w-2xl leading-relaxed text-left">
+											A selection of my recent work, highlighting end-to-end architecture and stunning UI design.
+										</p>
+									</div>
+
+									{/* Projects Accordion */}
+									<ProjectAccordion />
+
+									{/* View All Projects Button */}
+									<div className="mt-12 md:mt-4 w-full flex justify-start md:justify-center relative z-20">
+										<a href="#projects" className="group relative flex items-center cursor-pointer p-1 rounded-full">
+											<div className="absolute left-0 top-0 bottom-0 w-12 md:w-14 bg-white rounded-full transition-[width] duration-500 ease-[cubic-bezier(0.5,0,0,1)] group-hover:w-full shadow-[0_0_20px_rgba(255,255,255,0.1)]"></div>
+
+											<div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shrink-0 z-10">
+												<svg className="w-5 h-5 text-zinc-950 ml-0.5 md:ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+													<path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+												</svg>
+											</div>
+											<span className="relative z-10 text-white font-black tracking-[0.2em] uppercase text-sm md:text-base transition-colors duration-500 group-hover:text-zinc-950 pl-3 md:pl-4 pr-6 md:pr-8">
+												View All Projects
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</main>
+	);
+}
+
+const TechChip = ({ name, iconUrl, invertIcon, level = 3 }: { name: string, iconUrl: string, invertIcon?: boolean, level?: number }) => {
+	return (
+		<div className="flex items-center gap-4 p-3 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/50 hover:bg-zinc-800/80 transition-all duration-300 group/chip cursor-default shadow-sm hover:shadow-[0_0_15px_rgba(16,185,129,0.2)] overflow-hidden relative">
+			<div className="w-8 h-8 rounded-lg bg-zinc-950 flex items-center justify-center border border-zinc-800 group-hover/chip:border-emerald-500/50 transition-colors duration-300 shadow-inner shrink-0 z-10">
+				<img src={iconUrl} alt={name} className={`w-5 h-5 object-contain group-hover/chip:scale-110 group-hover/chip:rotate-3 transition-transform duration-300 filter drop-shadow-md ${invertIcon ? 'invert brightness-0' : ''}`} />
+			</div>
+			<div className="flex justify-between items-center w-full z-10 pr-2">
+				<span className="text-sm font-medium text-zinc-400 group-hover/chip:text-emerald-100 transition-colors duration-300">{name}</span>
+				<span className="text-[10px] text-zinc-600 group-hover/chip:text-emerald-500/80 transition-colors duration-300">{level * 20}%</span>
+			</div>
+
+			{/* Progress Bar Stuck to Bottom Edge */}
+			<div className="absolute bottom-0 left-0 w-full h-[3px] bg-zinc-800/30">
+				<div
+					className="h-full bg-emerald-500/50 group-hover/chip:bg-emerald-400 transition-all duration-1000 ease-out group-hover/chip:shadow-[0_0_10px_rgba(16,185,129,0.8)]"
+					style={{ width: `${level * 20}%` }}
+				></div>
+			</div>
+		</div>
+	);
+}
+
+const ProjectAccordion = () => {
+	const projects = [
+		{
+			title: "The Uniques",
+			num: "01",
+			description: "A real estate portal built with Next.js and Framer Motion, featuring dynamic data visualization and a seamless user experience.",
+			techs: ["Next.js", "Tailwind", "Framer Motion", "Supabase", "TypeScript"],
+			iframeUrl: "https://theuniques.in",
+			imageUrl: "/projects/theuniques.png"
+		},
+		{
+			title: "Chintan News",
+			num: "02",
+			description: "A real-time news platform built with Next.js and Supabase, featuring dynamic data visualization and a seamless user experience.",
+			techs: ["Next.js", "Tailwind", "Framer Motion", "Supabase", "TypeScript"],
+			iframeUrl: "https://chintannews.in",
+			imageUrl: "/projects/chintannews.png"
+		},
+		{
+			title: "Career Guide Global",
+			num: "03",
+			description: "A educational website built with Next.js and Supabase, featuring dynamic data visualization and a seamless user experience.",
+			techs: ["Next.js", "Tailwind", "Framer Motion", "Supabase", "TypeScript"],
+			iframeUrl: "https://career-guide-nine-sable.vercel.app",
+			imageUrl: "/projects/careerguide.png"
+		},
+	];
+
+	return (
+		<div className="flex flex-col lg:flex-row w-full lg:h-[450px] gap-4 md:gap-6 mt-8">
+			{projects.map((proj, idx) => (
+				<div key={idx} className="relative flex-none lg:flex-1 h-[450px] rounded-[2rem] border border-transparent">
+					{/* Drop Shadow Wrapper because clipPath removes CSS shadows */}
+					<div className="absolute inset-0 filter drop-shadow-[0_10px_20px_rgba(16,185,129,0.1)]">
+						<div className="w-full h-full bg-zinc-950 relative overflow-hidden" style={{ clipPath: 'url(#card-shape)' }}>
+
+							{/* Static High-Res Screenshot Background for 0 Lag */}
+							<div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-40 bg-zinc-900">
+								<img src={proj.imageUrl} alt={proj.title} className="absolute inset-0 w-full h-full object-cover object-top" />
+								<div className="absolute inset-0 opacity-[0.2]" style={{ backgroundImage: 'radial-gradient(circle, #10b981 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+							</div>
+
+							{/* Dark Overlay Gradient to make text readable */}
+							<div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent opacity-90 pointer-events-none"></div>
+
+							{/* Active State Content (Permanently Visible) */}
+							<div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end pointer-events-none pb-[90px] md:pb-[100px]">
+								<div className="flex items-center justify-between mb-4">
+									<span className="text-emerald-500 text-lg">{proj.num}</span>
+									<div className="h-[1px] w-24 md:w-48 bg-emerald-500/30"></div>
+								</div>
+								<h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight drop-shadow-lg whitespace-nowrap truncate w-full">{proj.title}</h3>
+							</div>
+						</div>
+					</div>
+
+					{/* The Explore Button sitting perfectly inside the SVG Cutout! */}
+					<div className="absolute bottom-2 right-2 lg:bottom-4 lg:right-1 z-50">
+						<a href={proj.iframeUrl} target="_blank" rel="noreferrer" className="group relative overflow-hidden pointer-events-auto px-5 py-2.5 md:px-6 md:py-3 bg-white text-zinc-950 text-xs md:text-sm font-bold rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-colors duration-300">
+							<div className="absolute inset-y-0 left-0 bg-emerald-400 w-0 group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+							<span className="relative z-10 flex items-center gap-2">
+								Explore Project
+								<FluidArrowRight size={16} className="text-zinc-950" />
+							</span>
+						</a>
+					</div>
+				</div>
+			))}
+		</div>
 	);
 }

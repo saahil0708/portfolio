@@ -1,14 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useMotionValue } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  
+
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
+  
+  // Spring physics for buttery-smooth tracking
+  const springConfig = { damping: 25, stiffness: 400, mass: 0.5 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
     setIsMounted(true);
@@ -53,10 +58,10 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 rounded-full pointer-events-none z-[10000] flex items-center justify-center transition-all duration-300 ease-out"
+      className="fixed top-0 left-0 rounded-full pointer-events-none z-[10000] flex items-center justify-center transition-[width,height,mix-blend-mode] duration-300 ease-out transform-gpu"
       style={{
-        x: cursorX,
-        y: cursorY,
+        x: cursorXSpring,
+        y: cursorYSpring,
         translateX: "-50%",
         translateY: "-50%",
         width: isHovering ? 64 : 10,
