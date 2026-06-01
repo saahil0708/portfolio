@@ -109,19 +109,18 @@ export default function Home() {
 										</div>
 									</div>
 
-									{/* Right Column: Complex Photo Layout */}
-									<div className="relative w-full lg:w-auto flex justify-center lg:justify-end mt-16 lg:mt-0 shrink-0">
-										<div className="relative w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 group">
-											{/* Background offset shape */}
-											<div className="absolute top-4 -right-4 md:top-6 md:-right-6 w-full h-full bg-emerald-500/20 transition-transform duration-1000 lg:group-hover:translate-x-2 lg:group-hover:-translate-y-2" style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%)' }}></div>
-
+									{/* Right Column: Photo */}
+									<div className="relative w-full lg:w-auto flex justify-center lg:justify-end mt-16 lg:mt-0 shrink-0 transform translate-y-8 lg:translate-x-8 xl:translate-x-12">
+										<div className="relative group">
 											{/* Decorative Grid */}
-											<div className="absolute -bottom-10 -left-10 w-32 h-32 opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #10b981 2px, transparent 2.5px)', backgroundSize: '16px 16px' }}></div>
+											<div className="absolute -bottom-8 -left-8 md:-bottom-12 md:-left-10 w-32 h-32 md:w-32 md:h-32 opacity-40 pointer-events-none transition-transform duration-700 lg:group-hover:-translate-x-4 lg:group-hover:translate-y-4" style={{ backgroundImage: 'radial-gradient(circle, #10b981 2px, transparent 2.5px)', backgroundSize: '16px 16px' }}></div>
 
-											{/* Main Image Container */}
-											<div className="absolute inset-0 z-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-1000 lg:group-hover:-translate-x-2 lg:group-hover:translate-y-2" style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%)' }}>
-												<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Saahil" className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-1000" />
-											</div>
+											{/* Raw Image */}
+											<img 
+												src="/Profile.png" 
+												alt="Saahil" 
+												className="w-64 md:w-72 lg:w-80 xl:w-96 h-auto object-contain relative z-10 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500" 
+											/>
 										</div>
 									</div>
 
@@ -163,7 +162,7 @@ export default function Home() {
 				</section>
 
 				{/* Next Section (e.g., Projects/About) */}
-				<section className="relative z-20 w-full max-w-[170vh] -mt-[6%]">
+				<section className="relative z-20 w-full max-w-[170vh] -mt-[5.5%]">
 					<div className="relative w-full aspect-[2.2/0.98]">
 						{/* The Clipped Red Shape with Shadow */}
 						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
@@ -191,7 +190,7 @@ export default function Home() {
 										<button className="group mt-6 relative inline-flex items-center gap-2 px-6 py-5.5 rounded-full bg-emerald-500 text-zinc-950 overflow-hidden cursor-pointer focus:outline-none shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] transition-shadow duration-300">
 											{/* White Sweep Fill */}
 											<div className="absolute inset-0 bg-white origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.5,0,0,1)] rounded-full"></div>
-											
+
 											<span className="relative z-10 text-base font-medium tracking-wide">
 												Let's Talk
 											</span>
@@ -208,7 +207,7 @@ export default function Home() {
 				</section>
 
 				{/* Third Section */}
-				<section className="relative z-10 w-full max-w-[170vh] -mt-[2.5%]">
+				<section className="relative z-10 w-full max-w-[170vh] -mt-[2%]">
 					<div className="relative w-full aspect-[2.2/1.5]">
 						{/* The Clipped Red Shape with Shadow */}
 						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
@@ -220,118 +219,7 @@ export default function Home() {
 								<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.05),transparent_50%)]"></div>
 
 								<div className="flex flex-col w-full h-full pt-[12%] pb-[8%] px-8 md:px-24 z-10 justify-center gap-12 md:gap-20">
-
-									{/* Top Half: What I Do */}
-									<div className="flex flex-col md:flex-row w-full gap-8 md:gap-24 items-center">
-
-										{/* Left Side: Title */}
-										<div className="flex-1 flex flex-col items-start justify-center">
-											<div className="flex items-center gap-4 mb-6">
-												<div className="w-8 md:w-12 h-[2px] bg-emerald-500"></div>
-												<span className="text-emerald-500 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Capabilities</span>
-											</div>
-											<h2 className="text-5xl md:text-[6rem] font-black text-white leading-[0.9] uppercase tracking-tighter opacity-90">
-												What<br />
-												<span className="text-zinc-600 italic">I Do</span>
-											</h2>
-											<p className="text-zinc-400 mt-6 max-w-xs md:max-w-sm text-sm md:text-base leading-relaxed">
-												Clear guidance, transparent engineering, and a performance-first process designed to reduce technical doubt.
-											</p>
-										</div>
-
-										{/* Right Side: Bento Grid */}
-										<div className="flex-[1.5] w-full flex flex-col justify-center">
-											<div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full">
-
-												{/* Card 1: Wide */}
-												<div className="md:col-span-2 bg-zinc-900/60 border border-zinc-700/30 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/30 transition-colors">
-													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-zinc-800 flex items-center justify-center mb-6 md:mb-8">
-														<svg className="w-5 h-5 md:w-6 md:h-6 text-zinc-400 group-hover:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-														</svg>
-													</div>
-													<div>
-														<h3 className="text-lg md:text-xl font-bold text-zinc-200 mb-2">Frontend Architecture</h3>
-														<p className="text-xs md:text-sm text-zinc-500 font-light">Building scalable, high-performance web applications using cutting-edge frameworks.</p>
-													</div>
-												</div>
-
-												{/* Card 2: Square */}
-												<div className="md:col-span-1 bg-emerald-950/30 border border-emerald-900/50 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/50 transition-colors">
-													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-emerald-900/40 flex items-center justify-center mb-6 md:mb-8">
-														<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-														</svg>
-													</div>
-													<div>
-														<h3 className="text-base md:text-lg font-bold text-zinc-200 mb-2 leading-tight">Systems Engineering</h3>
-														<p className="text-xs text-zinc-500 font-light">Robust data flows.</p>
-													</div>
-												</div>
-
-												{/* Card 3: Square */}
-												<div className="md:col-span-1 bg-emerald-950/30 border border-emerald-900/50 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/50 transition-colors">
-													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-emerald-900/40 flex items-center justify-center mb-6 md:mb-8">
-														<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-														</svg>
-													</div>
-													<div>
-														<h3 className="text-base md:text-lg font-bold text-zinc-200 mb-2 leading-tight">UI/UX Design</h3>
-														<p className="text-xs text-zinc-500 font-light">Pixel-perfect interfaces.</p>
-													</div>
-												</div>
-
-												{/* Card 4: Wide */}
-												<div className="md:col-span-2 bg-zinc-900/60 border border-zinc-700/30 rounded-[2rem] p-6 md:p-8 flex flex-col justify-between min-h-[180px] md:min-h-[220px] group hover:border-emerald-500/30 transition-colors">
-													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-zinc-800 flex items-center justify-center mb-6 md:mb-8">
-														<svg className="w-5 h-5 md:w-6 md:h-6 text-zinc-400 group-hover:text-emerald-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-														</svg>
-													</div>
-													<div>
-														<h3 className="text-lg md:text-xl font-bold text-zinc-200 mb-2">Performance Optimization</h3>
-														<p className="text-xs md:text-sm text-zinc-500 font-light">Auditing and optimizing web applications for maximum speed, accessibility, and SEO.</p>
-													</div>
-												</div>
-
-											</div>
-										</div>
-									</div>
-
-									{/* Bottom Half: Horizontal Education Timeline */}
-									<div className="w-full flex flex-col">
-										<div className="flex items-center gap-4 mb-8 md:mb-12">
-											<div className="w-8 md:w-12 h-[2px] bg-emerald-500"></div>
-											<span className="text-emerald-500 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">Education & Journey</span>
-										</div>
-
-										<div className="relative w-full grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-											{/* Horizontal Line connecting them on desktop */}
-											<div className="hidden md:block absolute top-[24px] left-[16.66%] right-[16.66%] h-[1px] bg-zinc-700/50 -z-10"></div>
-
-											{[
-												{ year: "2018 - 2022", title: "Bachelor of Technology", school: "University of Technology", desc: "Computer Science & Engineering. Core focus on algorithms and data structures." },
-												{ year: "2022 - 2024", title: "Master of Science", school: "Institute of Engineering", desc: "Specialization in Software Architecture and High-Performance Computing." },
-												{ year: "2024 - Present", title: "Industry Expert", school: "Continuous Learning", desc: "Mastering advanced React patterns, WebGL, and System Design." },
-											].map((edu, i) => (
-												<div key={i} className="flex flex-col relative group">
-													{/* Node */}
-													<div className="w-12 h-12 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-6 group-hover:border-emerald-500 transition-colors duration-500 mx-auto">
-														<div className="w-3 h-3 rounded-full bg-zinc-600 group-hover:bg-emerald-500 transition-colors duration-500"></div>
-													</div>
-
-													<div className="text-center flex flex-col items-center">
-														<span className="text-emerald-500 font-mono text-xs tracking-widest mb-2 block">{edu.year}</span>
-														<h3 className="text-xl font-bold text-zinc-200 mb-1">{edu.title}</h3>
-														<h4 className="text-sm font-medium text-zinc-400 mb-3">{edu.school}</h4>
-														<p className="text-xs md:text-sm text-zinc-500 font-light max-w-xs">{edu.desc}</p>
-													</div>
-												</div>
-											))}
-										</div>
-									</div>
-
+									{/* Content removed per user request */}
 								</div>
 							</div>
 						</div>
