@@ -18,6 +18,9 @@ export default function Home() {
 					<clipPath id="third-shape" clipPathUnits="objectBoundingBox">
 						<path d="M 0.04,0 L 0.345,0 Q 0.365,0 0.365,0.03 Q 0.365,0.06 0.385,0.06 L 0.96,0.06 Q 1,0.06 1,0.12 L 1,0.94 Q 1,1 0.96,1 L 0.04,1 Q 0,1 0,0.94 L 0,0.06 Q 0,0 0.04,0 Z" />
 					</clipPath>
+					<clipPath id="fourth-shape" clipPathUnits="objectBoundingBox">
+						<path d="M 0.04,0 L 0.96,0 Q 1,0 1,0.06 L 1,0.94 Q 1,1 0.96,1 L 0.04,1 Q 0,1 0,0.94 L 0,0.06 Q 0,0 0.04,0 Z" />
+					</clipPath>
 				</defs>
 			</svg>
 
@@ -118,10 +121,10 @@ export default function Home() {
 											<div className="absolute -bottom-8 -left-8 md:-bottom-12 md:-left-10 w-32 h-32 md:w-32 md:h-32 opacity-40 pointer-events-none transition-transform duration-700 lg:group-hover:-translate-x-4 lg:group-hover:translate-y-4" style={{ backgroundImage: 'radial-gradient(circle, #10b981 2px, transparent 2.5px)', backgroundSize: '16px 16px' }}></div>
 
 											{/* Raw Image */}
-											<img 
-												src="/Profile.png" 
-												alt="Saahil" 
-												className="w-64 md:w-72 lg:w-80 xl:w-96 h-auto object-contain relative z-10 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500" 
+											<img
+												src="/Profile.png"
+												alt="Saahil"
+												className="w-64 md:w-72 lg:w-80 xl:w-96 h-auto object-contain relative z-10 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
 											/>
 										</div>
 									</div>
@@ -210,18 +213,272 @@ export default function Home() {
 
 				{/* Third Section */}
 				<section className="relative z-10 w-full max-w-[170vh] -mt-[2%]">
-					<div className="relative w-full aspect-[2.2/1.5]">
+					<div className="relative w-full aspect-[2.2/2.0] md:aspect-[2.2/1.65]">
 						{/* The Clipped Red Shape with Shadow */}
 						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
 							<div
-								className="w-full h-full bg-zinc-800 relative overflow-hidden flex pointer-events-auto"
+								className="w-full h-full bg-gradient-to-br from-zinc-700 via-zinc-800/90 to-zinc-900 relative overflow-hidden flex pointer-events-auto"
 								style={{ clipPath: 'url(#third-shape)' }}
 							>
-								{/* Background textures */}
-								<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.05),transparent_50%)]"></div>
+								{/* Background Textures & Watermarks */}
+								<div className="absolute inset-0 pointer-events-none">
+									{/* Amplified emerald glow from top left */}
+									<div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(16,185,129,0.2),transparent_60%)]"></div>
 
-								<div className="flex flex-col w-full h-full pt-[12%] pb-[8%] px-8 md:px-24 z-10 justify-center gap-12 md:gap-20">
-									{/* Content removed per user request */}
+									{/* Dotted Grid focused on top left - increased opacity */}
+									<div
+										className="absolute inset-0 opacity-[0.15]"
+										style={{
+											backgroundImage: 'radial-gradient(#10b981 1.5px, transparent 1.5px)',
+											backgroundSize: '36px 36px',
+											maskImage: 'radial-gradient(ellipse at top left, black 30%, transparent 80%)',
+											WebkitMaskImage: 'radial-gradient(ellipse at top left, black 30%, transparent 80%)'
+										}}
+									></div>
+
+									{/* Massive Watermark Text - increased opacity */}
+									<div className="absolute -top-12 md:-top-20 -left-12 md:-left-10 opacity-[0.05] text-white font-black text-[8rem] md:text-[14rem] lg:text-[18rem] tracking-tighter leading-none select-none">
+										SERVICES
+									</div>
+								</div>
+
+								<div className="flex flex-col w-full h-full pt-[25%] md:pt-[12%] pb-[15%] md:pb-[12%] px-8 md:px-24 z-10 justify-start gap-8 md:gap-12">
+									{/* Right Aligned Heading */}
+									<div className="flex w-full items-center justify-end gap-4">
+										<h2 className="text-zinc-300 font-mono tracking-[0.2em] uppercase text-sm md:text-base text-right">
+											What I Do
+										</h2>
+										<div className="w-20 h-0.5 md:h-0.25 bg-emerald-500"></div>
+									</div>
+
+									{/* Full Width Paragraph */}
+									<div className="w-full">
+										<p className="text-zinc-400 text-lg md:text-2xl font-light leading-relaxed w-full text-right md:text-left">
+											I specialize in building end-to-end solutions that are as robust under the hood as they are stunning on the screen. From architecting scalable backend systems and crafting responsive front-end interfaces to seamless API integrations, I bridge the gap between design and complex logic to deliver high-performance digital experiences tailored to your needs.
+										</p>
+									</div>
+
+									{/* Bento Grid (Alternating Wide/Small Layout) */}
+									<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[220px] mt-4 z-20">
+
+										{/* Item 1: Wide (2 columns) */}
+										<div className="md:col-span-2 bg-zinc-900/60 border border-emerald-500/10 rounded-3xl p-6 md:p-8 hover:border-emerald-500/30 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative shadow-xl backdrop-blur-sm">
+											{/* Subtle background glow */}
+											<div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-[80px] -mr-20 -mt-20 group-hover:bg-emerald-500/10 transition-colors duration-700"></div>
+
+											<div className="flex flex-row justify-between h-full">
+												<div className="flex flex-col justify-between h-full relative z-10 w-2/3">
+													{/* Icon */}
+													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 mb-4 group-hover:scale-110 transition-transform duration-500">
+														<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+														</svg>
+													</div>
+													<div>
+														<h3 className="text-xl md:text-2xl font-bold text-white mb-2">Frontend Engineering</h3>
+														<p className="text-zinc-400 text-sm md:text-base leading-relaxed">Crafting pixel-perfect, highly interactive user interfaces using React, Next.js, and Framer Motion.</p>
+													</div>
+												</div>
+												{/* Decorative area mimicking the illustration in the reference */}
+												<div className="w-1/3 flex items-center justify-end relative z-10">
+													<div className="w-full h-full bg-zinc-800/50 rounded-2xl border border-zinc-700/30 transform rotate-3 group-hover:rotate-6 group-hover:scale-105 transition-all duration-500 relative overflow-hidden">
+														<div className="absolute top-2 left-2 flex gap-1.5">
+															<div className="w-2 h-2 rounded-full bg-zinc-600"></div>
+															<div className="w-2 h-2 rounded-full bg-zinc-600"></div>
+															<div className="w-2 h-2 rounded-full bg-zinc-600"></div>
+														</div>
+														<div className="absolute inset-x-2 top-6 bottom-2 bg-zinc-900 rounded-lg"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										{/* Item 2: Small (1 column) */}
+										<div className="md:col-span-1 bg-gradient-to-br from-emerald-900/40 to-zinc-900/80 border border-emerald-500/20 rounded-3xl p-6 md:p-8 hover:border-emerald-500/40 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-xl backdrop-blur-sm">
+											<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 mb-4 group-hover:scale-110 transition-transform duration-500">
+												<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+												</svg>
+											</div>
+											<div className="relative z-10">
+												<h3 className="text-xl md:text-2xl font-bold text-white mb-2">Backend Systems</h3>
+												<p className="text-sm md:text-base text-zinc-300/80">Scalable Node.js architectures and robust databases.</p>
+											</div>
+										</div>
+
+										{/* Item 3: Small (1 column) */}
+										<div className="md:col-span-1 bg-gradient-to-br from-zinc-900/80 to-emerald-900/40 border border-emerald-500/20 rounded-3xl p-6 md:p-8 hover:border-emerald-500/40 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden shadow-xl backdrop-blur-sm">
+											<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 mb-4 group-hover:scale-110 transition-transform duration-500">
+												<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+													<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+												</svg>
+											</div>
+											<div className="relative z-10">
+												<h3 className="text-xl md:text-2xl font-bold text-white mb-2">UI/UX Design</h3>
+												<p className="text-sm md:text-base text-zinc-300/80">Designing intuitive experiences and design systems in Figma.</p>
+											</div>
+										</div>
+
+										{/* Item 4: Wide (2 columns) */}
+										<div className="md:col-span-2 bg-zinc-900/60 border border-emerald-500/10 rounded-3xl p-6 md:p-8 hover:border-emerald-500/30 transition-all duration-500 flex flex-col justify-between group overflow-hidden relative shadow-xl backdrop-blur-sm">
+											{/* Subtle background glow */}
+											<div className="absolute bottom-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-[80px] -mr-20 -mb-20 group-hover:bg-emerald-500/10 transition-colors duration-700"></div>
+
+											<div className="flex flex-row justify-between h-full">
+												<div className="flex flex-col justify-between h-full relative z-10 w-2/3">
+													{/* Icon */}
+													<div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 mb-4 group-hover:scale-110 transition-transform duration-500">
+														<svg className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+															<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+														</svg>
+													</div>
+													<div>
+														<h3 className="text-xl md:text-2xl font-bold text-white mb-2">Cloud & DevOps</h3>
+														<p className="text-zinc-400 text-sm md:text-base leading-relaxed">Deploying and maintaining CI/CD pipelines on modern scalable cloud infrastructure.</p>
+													</div>
+												</div>
+												{/* Decorative area */}
+												<div className="w-1/3 flex items-center justify-end relative z-10">
+													<div className="w-full h-full bg-zinc-800/50 rounded-2xl border border-zinc-700/30 transform -rotate-3 group-hover:-rotate-6 group-hover:scale-105 transition-all duration-500 relative overflow-hidden flex flex-col justify-between p-3">
+														<div className="w-full h-2 bg-zinc-700/50 rounded-full mb-2"></div>
+														<div className="w-2/3 h-2 bg-zinc-700/50 rounded-full mb-4"></div>
+														<div className="w-full h-12 bg-emerald-500/20 rounded-lg border border-emerald-500/30"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* Fourth Section - Education */}
+				<section className="relative z-0 w-full max-w-[170vh] mt-4 md:mt-8">
+					<div className="relative w-full aspect-[2.2/2.4] md:aspect-[2.2/1.0]">
+						{/* Container with Shadow */}
+						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
+							<div
+								className="w-full h-full bg-zinc-900 relative overflow-hidden flex pointer-events-auto rounded-[2.5rem] md:rounded-[3.5rem] border border-zinc-800/50"
+							>
+								{/* Premium Deep Background Layer */}
+								<div className="absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black pointer-events-none"></div>
+
+								{/* Subtle Dotted Grid */}
+								<div
+									className="absolute inset-0 opacity-[0.2] pointer-events-none"
+									style={{
+										backgroundImage: 'radial-gradient(#10b981 1px, transparent 1px)',
+										backgroundSize: '40px 40px',
+										maskImage: 'radial-gradient(ellipse at center, black 10%, transparent 80%)',
+										WebkitMaskImage: 'radial-gradient(ellipse at center, black 10%, transparent 80%)'
+									}}
+								></div>
+
+								{/* Abstract Ambient Glows */}
+								<div className="absolute top-[-10%] left-[-10%] w-[50%] h-[60%] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+								<div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[60%] bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+
+								{/* Center Faint Watermark */}
+								<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] text-white font-black text-[6rem] md:text-[14rem] tracking-tighter leading-none select-none pointer-events-none whitespace-nowrap">
+									ACADEMICS
+								</div>
+
+								<div className="flex flex-col w-full h-full pt-[8%] md:pt-[5%] pb-[12%] md:pb-[8%] px-8 md:px-24 z-10 justify-start gap-8 md:gap-8">
+									{/* Left Aligned Heading & Subheading */}
+									<div className="flex flex-col gap-3">
+										<div className="flex w-full items-center justify-start gap-4">
+											<div className="w-16 md:w-20 h-0.5 md:h-0.25 bg-emerald-500"></div>
+											<h2 className="text-zinc-300 font-mono tracking-[0.2em] uppercase text-sm md:text-base">
+												Education
+											</h2>
+										</div>
+										<p className="text-zinc-400 text-sm md:text-base max-w-2xl leading-relaxed">
+											My academic journey and foundational learning experiences that shaped my technical expertise.
+										</p>
+									</div>
+
+									{/* Premium Education Timeline */}
+									<div className="relative w-full max-w-6xl mx-auto mt-6 md:mt-12">
+										{/* The Continuous Track (Desktop) */}
+										<div className="hidden md:block absolute top-[23px] left-[16.6%] right-[16.6%] h-[2px] bg-zinc-800/80 rounded-full"></div>
+										{/* The Progress Glow (Desktop) - Center Weighted */}
+										<div className="hidden md:block absolute top-[23px] left-[16.6%] right-[16.6%] h-[2px] bg-gradient-to-r from-emerald-500/0 via-emerald-500 to-emerald-500/0 shadow-[0_0_15px_rgba(16,185,129,0.8)] rounded-full"></div>
+
+										{/* The Continuous Track (Mobile) */}
+										<div className="block md:hidden absolute left-[23px] top-[24px] bottom-0 w-[2px] bg-zinc-800/80 rounded-full"></div>
+										{/* The Progress Glow (Mobile) - Center Weighted */}
+										<div className="block md:hidden absolute left-[23px] top-[24px] bottom-0 w-[2px] bg-gradient-to-b from-emerald-500/0 via-emerald-500 to-emerald-500/0 shadow-[0_0_15px_rgba(16,185,129,0.8)] rounded-full"></div>
+
+										<div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-6 relative z-10">
+
+											{/* Step 1: Primary School */}
+											<div className="flex flex-row md:flex-col items-start group relative">
+												{/* Thick Ring Node */}
+												<div className="w-12 h-12 rounded-full bg-zinc-950 border-[4px] border-zinc-800/80 flex items-center justify-center shrink-0 md:mb-8 relative z-10 mx-auto transition-all duration-500 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+													<div className="w-3 h-3 rounded-full bg-zinc-700 transition-colors duration-500 group-hover:bg-emerald-400"></div>
+												</div>
+
+												{/* Content Area - Subtly Faded Card */}
+												<div className="ml-8 md:ml-0 w-full relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-zinc-800/20 to-transparent border-t border-zinc-700/50 transition-all duration-500 hover:bg-zinc-800/40 hover:-translate-y-1">
+													<div className="mb-4 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 shadow-sm">
+														<span className="text-zinc-500 text-[10px] uppercase tracking-widest">2006 — 2016</span>
+													</div>
+													<h3 className="text-xl font-bold text-zinc-100 mb-1 tracking-tight transition-colors group-hover:text-white">Primary School</h3>
+													<h4 className="text-zinc-500 text-sm font-medium mb-5">Delhi Public School</h4>
+
+													<p className="text-zinc-400/80 text-sm leading-relaxed max-w-[280px]">
+														Built a strong foundation in core subjects. Developed an early interest in science, mathematics, and logical reasoning.
+													</p>
+												</div>
+											</div>
+
+											{/* Step 2: Secondary School (Active / Glowing) */}
+											<div className="flex flex-row md:flex-col items-start group relative">
+												{/* Active Thick Ring Node */}
+												<div className="w-12 h-12 rounded-full bg-zinc-950 border-[4px] border-emerald-500 flex items-center justify-center shrink-0 md:mb-8 relative z-10 mx-auto shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+													<div className="w-3 h-3 rounded-full bg-emerald-500 animate-[pulse_2s_infinite] shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
+												</div>
+
+												{/* Content Area - Illuminated Card */}
+												<div className="ml-8 md:ml-0 w-full relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-emerald-500/10 to-transparent border-t border-emerald-500/40 transition-all duration-500 hover:bg-emerald-500/15 hover:-translate-y-1">
+													<div className="hidden md:block absolute -top-8 left-1/2 w-[1px] h-8 bg-gradient-to-b from-emerald-500/40 to-transparent -translate-x-1/2"></div>
+													<div className="mb-4 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+														<span className="text-emerald-400 text-[10px] uppercase tracking-widest">2016 — 2020</span>
+													</div>
+													<h3 className="text-xl font-bold text-white mb-1 tracking-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">Secondary School</h3>
+													<h4 className="text-emerald-400 text-sm font-medium mb-5">Delhi Public School</h4>
+
+													<p className="text-zinc-300 text-sm leading-relaxed max-w-[280px]">
+														Focused on Physics, Chemistry, and Mathematics. Discovered programming and led the computer science club.
+													</p>
+												</div>
+											</div>
+
+											{/* Step 3: College */}
+											<div className="flex flex-row md:flex-col items-start group relative">
+												{/* Thick Ring Node */}
+												<div className="w-12 h-12 rounded-full bg-zinc-950 border-[4px] border-zinc-800/80 flex items-center justify-center shrink-0 md:mb-8 relative z-10 mx-auto transition-all duration-500 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+													<div className="w-3 h-3 rounded-full bg-zinc-700 transition-colors duration-500 group-hover:bg-emerald-400"></div>
+												</div>
+
+												{/* Content Area - Subtly Faded Card */}
+												<div className="ml-8 md:ml-0 w-full relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-zinc-800/20 to-transparent border-t border-zinc-700/50 transition-all duration-500 hover:bg-zinc-800/40 hover:-translate-y-1">
+													<div className="mb-4 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 shadow-sm">
+														<span className="text-zinc-500 text-[10px] uppercase tracking-widest">2020 — 2024</span>
+													</div>
+													<h3 className="text-xl font-bold text-zinc-100 mb-1 tracking-tight transition-colors group-hover:text-white">B.Tech in CS</h3>
+													<h4 className="text-zinc-500 text-sm font-medium mb-5">Indian Institute of Tech</h4>
+
+													<p className="text-zinc-400/80 text-sm leading-relaxed max-w-[280px]">
+														Specialized in core Computer Science. Built scalable systems, participated in hackathons, and published research.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
