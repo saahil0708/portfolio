@@ -1,5 +1,9 @@
 import { FluidArrowRight } from "@/components/FluidArrow";
-
+import Image from "next/image";
+import Link from "next/link";
+import Cloud from '../../public/Server-cuate.svg';
+import Coding from '../../public/Hand coding-rafiki.svg';
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 export default function Home() {
 	return (
 		<main className="min-h-screen bg-zinc-900 overflow-x-hidden font-sans relative">
@@ -25,10 +29,13 @@ export default function Home() {
 						<path d="M 0.04,0 L 0.96,0 Q 1,0 1,0.06 L 1,0.94 Q 1,1 0.96,1 L 0.30,1 Q 0.28,1 0.28,0.965 Q 0.28,0.93 0.26,0.93 L 0.04,0.93 Q 0,0.93 0,0.87 L 0,0.06 Q 0,0 0.04,0 Z" />
 					</clipPath>
 					<clipPath id="projects-shape" clipPathUnits="objectBoundingBox">
-						<path d="M 0.05,0 L 0.24,0 Q 0.26,0 0.26,0.035 Q 0.26,0.07 0.28,0.07 L 0.95,0.07 Q 1,0.07 1,0.15 L 1,0.92 Q 1,1 0.95,1 L 0.05,1 Q 0,1 0,0.92 L 0,0.08 Q 0,0 0.05,0 Z" />
+						<path d="M 0.05,0 L 0.24,0 Q 0.26,0 0.26,0.035 Q 0.26,0.07 0.28,0.07 L 0.95,0.07 Q 1,0.07 1,0.15 L 1,0.85 Q 1,0.93 0.95,0.93 L 0.80,0.93 Q 0.78,0.93 0.78,0.965 Q 0.78,1 0.76,1 L 0.05,1 Q 0,1 0,0.92 L 0,0.08 Q 0,0 0.05,0 Z" />
 					</clipPath>
 					<clipPath id="card-shape" clipPathUnits="objectBoundingBox">
 						<path d="M 0.08,0 L 0.92,0 Q 1,0 1,0.08 L 1,0.76 Q 1,0.84 0.92,0.84 L 0.56,0.84 Q 0.48,0.84 0.48,0.92 Q 0.48,1 0.40,1 L 0.08,1 Q 0,1 0,0.92 L 0,0.08 Q 0,0 0.08,0 Z" />
+					</clipPath>
+					<clipPath id="testimonials-shape" clipPathUnits="objectBoundingBox">
+						<path d="M 0.06,0.12 L 0.76,0.12 Q 0.79,0.12 0.79,0.06 Q 0.79,0 0.82,0 L 0.94,0 Q 1,0 1,0.12 L 1,0.88 Q 1,1 0.94,1 L 0.06,1 Q 0,1 0,0.88 L 0,0.24 Q 0,0.12 0.06,0.12 Z" />
 					</clipPath>
 				</defs>
 			</svg>
@@ -290,14 +297,15 @@ export default function Home() {
 												</div>
 												{/* Decorative area mimicking the illustration in the reference */}
 												<div className="w-1/3 flex items-center justify-end relative z-10">
-													<div className="w-full h-full bg-zinc-800/50 rounded-2xl border border-zinc-700/30 transform rotate-3 group-hover:rotate-6 group-hover:scale-105 transition-all duration-500 relative overflow-hidden">
+													{/* <div className="w-full h-full bg-zinc-800/50 rounded-2xl border border-zinc-700/30 transform rotate-3 group-hover:rotate-6 group-hover:scale-105 transition-all duration-500 relative overflow-hidden">
 														<div className="absolute top-2 left-2 flex gap-1.5">
 															<div className="w-2 h-2 rounded-full bg-zinc-600"></div>
 															<div className="w-2 h-2 rounded-full bg-zinc-600"></div>
 															<div className="w-2 h-2 rounded-full bg-zinc-600"></div>
 														</div>
 														<div className="absolute inset-x-2 top-6 bottom-2 bg-zinc-900 rounded-lg"></div>
-													</div>
+													</div> */}
+													<img src={Coding.src} alt="Cloud Illustration" className="transition-transform duration-500 w-full h-auto" />
 												</div>
 											</div>
 										</div>
@@ -348,11 +356,12 @@ export default function Home() {
 												</div>
 												{/* Decorative area */}
 												<div className="w-1/3 flex items-center justify-end relative z-10">
-													<div className="w-full h-full bg-zinc-800/50 rounded-2xl border border-zinc-700/30 transform -rotate-3 group-hover:-rotate-6 group-hover:scale-105 transition-all duration-500 relative overflow-hidden flex flex-col justify-between p-3">
+													{/* <div className="w-full h-full bg-zinc-800/50 rounded-2xl border border-zinc-700/30 transform -rotate-3 group-hover:-rotate-6 group-hover:scale-105 transition-all duration-500 relative overflow-hidden flex flex-col justify-between p-3">
 														<div className="w-full h-2 bg-zinc-700/50 rounded-full mb-2"></div>
 														<div className="w-2/3 h-2 bg-zinc-700/50 rounded-full mb-4"></div>
 														<div className="w-full h-12 bg-emerald-500/20 rounded-lg border border-emerald-500/30"></div>
-													</div>
+													</div> */}
+													<img src={Cloud.src} alt="Cloud Illustration" className="transition-transform duration-500 w-full h-auto" />
 												</div>
 											</div>
 										</div>
@@ -702,7 +711,7 @@ export default function Home() {
 
 									{/* View All Projects Button */}
 									<div className="mt-12 md:mt-4 w-full flex justify-start md:justify-center relative z-20">
-										<a href="#projects" className="group relative flex items-center cursor-pointer p-1 rounded-full">
+										<Link href="/projects" className="group relative flex items-center cursor-pointer p-1 rounded-full">
 											<div className="absolute left-0 top-0 bottom-0 w-12 md:w-14 bg-white rounded-full transition-[width] duration-500 ease-[cubic-bezier(0.5,0,0,1)] group-hover:w-full shadow-[0_0_20px_rgba(255,255,255,0.1)]"></div>
 
 											<div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shrink-0 z-10">
@@ -713,8 +722,36 @@ export default function Home() {
 											<span className="relative z-10 text-white font-black tracking-[0.2em] uppercase text-sm md:text-base transition-colors duration-500 group-hover:text-zinc-950 pl-3 md:pl-4 pr-6 md:pr-8">
 												View All Projects
 											</span>
-										</a>
+										</Link>
 									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{/* Seventh Section - Testimonials */}
+				<section className="relative z-0 w-full max-w-[170vh] -mt-10">
+					<div className="relative w-full aspect-auto">
+						<div className="relative w-full filter drop-shadow-2xl pointer-events-none">
+							<div
+								className="w-full bg-zinc-800 relative overflow-hidden flex flex-col pointer-events-auto shadow-[0_0_50px_rgba(16,185,129,0.05)]"
+								style={{ clipPath: 'url(#testimonials-shape)' }}
+							>
+								{/* Premium Deep Background Layer */}
+								<div className="absolute inset-0 bg-gradient-to-br from-emerald-900/40 via-zinc-800 to-zinc-700/60 pointer-events-none"></div>
+
+								{/* Watermark */}
+								<h1 className="absolute -bottom-10 left-0 lg:-left-10 text-[6rem] md:text-[10rem] xl:text-[14rem] font-black text-zinc-700/30 select-none pointer-events-none z-0 tracking-tighter leading-none">
+									CLIENTS
+								</h1>
+
+								{/* Ambient Glowing Orbs */}
+								<div className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none" style={{ background: 'radial-gradient(circle closest-side, rgba(16, 185, 129, 0.15), transparent)' }}></div>
+
+								{/* Content */}
+								<div className="flex flex-col w-full pt-20 md:pt-24 pb-16 md:pb-20 px-8 md:px-12 lg:px-24 z-10 justify-start gap-8 md:gap-12">
+									<TestimonialsCarousel />
 								</div>
 							</div>
 						</div>
