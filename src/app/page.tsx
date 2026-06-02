@@ -4,6 +4,8 @@ import Link from "next/link";
 import Cloud from '../../public/Server-cuate.svg';
 import Coding from '../../public/Hand coding-rafiki.svg';
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
+import ContactSection from "@/components/ContactSection";
+
 export default function Home() {
 	return (
 		<main className="min-h-screen bg-zinc-900 overflow-x-hidden font-sans relative">
@@ -40,11 +42,11 @@ export default function Home() {
 				</defs>
 			</svg>
 
-			<div className="w-full flex flex-col items-center pt-[4vh] md:pt-[8vh] px-4 md:px-8 pb-20">
+			<div className="w-full flex flex-col items-center pt-[4vh] md:pt-[8vh] px-4 md:px-8 pb-6">
 				{/* Hero Section */}
 				<section className="relative z-30 w-full max-w-[170vh]">
 					{/* Hero Container */}
-					<div className="relative w-full aspect-[2.2/0.98]">
+					<div className="relative w-full aspect-[0.6/1] sm:aspect-[1/1] md:aspect-[2.2/0.98]">
 						{/* The Clipped Red Shape with Shadow */}
 						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
 							<div
@@ -116,7 +118,7 @@ export default function Home() {
 
 										{/* Buttons */}
 										<div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 md:gap-8 mt-8 md:mt-10">
-											<button className="group cursor-pointer relative inline-flex items-center h-10 md:h-12 rounded-full focus:outline-none bg-transparent">
+											<button suppressHydrationWarning className="group cursor-pointer relative inline-flex items-center h-10 md:h-12 rounded-full focus:outline-none bg-transparent">
 												<div className="absolute left-0 top-0 h-full w-10 md:w-12 bg-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.5,0,0,1)] group-hover:!w-full shadow-[0_0_20px_rgba(255,255,255,0.15)] group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)]"></div>
 												<div className="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 z-10 shrink-0">
 													<svg className="w-4 h-4 md:w-5 md:h-5 text-zinc-950 transition-transform duration-500 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -150,7 +152,7 @@ export default function Home() {
 						</div>
 
 						{/* Top-Left Clipped Negative Space: Social Media Icons */}
-						<div className="absolute z-10" style={{ top: '22%', left: '4%', transform: 'translate(-50%, -50%)' }}>
+						<div className="absolute z-10 hidden md:flex flex-col items-center justify-center gap-4" style={{ top: '22%', left: '4%', transform: 'translate(-50%, -50%)' }}>
 							<div className="bg-zinc-800 shadow-[0_8px_30px_rgba(9,9,11,0.5)] border border-zinc-800/50 rounded-[2rem] py-6 px-2 flex flex-col items-center justify-center gap-4 backdrop-blur-sm">
 								<a href="#" className="w-10 h-10 rounded-full bg-zinc-900/80 flex items-center justify-center text-zinc-400 hover:bg-emerald-500 hover:text-zinc-950 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
 									<svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -171,7 +173,7 @@ export default function Home() {
 						</div>
 
 						{/* Top-Right Clipped Negative Space: Text Navigation */}
-						<nav className="absolute z-10 top-6 right-6 md:top-8 md:right-20 bg-zinc-800/80 shadow-[0_8px_30px_rgba(9,9,11,0.5)] border border-zinc-700/50 rounded-full px-6 py-3 md:px-8 md:py-4 flex items-center justify-center gap-6 md:gap-10 backdrop-blur-md whitespace-nowrap max-w-[calc(100vw-2rem)] overflow-x-auto no-scrollbar">
+						<nav className="absolute z-10 top-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:top-8 md:right-20 bg-zinc-800/80 shadow-[0_8px_30px_rgba(9,9,11,0.5)] border border-zinc-700/50 rounded-full px-6 py-3 md:px-8 md:py-4 flex items-center justify-center gap-4 md:gap-10 backdrop-blur-md whitespace-nowrap max-w-[calc(100vw-2rem)] overflow-x-auto no-scrollbar">
 							{["About", "Skills", "Projects", "Testimonials", "Contact"].map((item) => (
 								<a key={item} href="#" className="relative group text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors duration-300">
 									<span className="relative z-10">{item}</span>
@@ -184,7 +186,7 @@ export default function Home() {
 
 				{/* Next Section (e.g., Projects/About) */}
 				<section className="relative z-20 w-full max-w-[170vh] -mt-[5.5%]">
-					<div className="relative w-full aspect-[2.2/0.98]">
+					<div className="relative w-full aspect-[0.6/1] sm:aspect-[1/1] md:aspect-[2.2/0.98]">
 						{/* The Clipped Red Shape with Shadow */}
 						<div className="absolute inset-0 w-full h-full filter drop-shadow-2xl pointer-events-none">
 							<div
@@ -208,7 +210,7 @@ export default function Home() {
 											I am a passionate Full Stack Developer who thrives at the intersection of complex engineering and pristine design. I build robust, scalable, and visually striking applications that bring ambitious ideas to life.
 										</p>
 										{/* CTA Button */}
-										<button className="group mt-6 relative inline-flex items-center gap-2 px-6 py-5.5 rounded-full bg-emerald-500 text-zinc-950 overflow-hidden cursor-pointer focus:outline-none shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] transition-shadow duration-300">
+										<button suppressHydrationWarning className="group mt-6 relative inline-flex items-center gap-2 px-6 py-5.5 rounded-full bg-emerald-500 text-zinc-950 overflow-hidden cursor-pointer focus:outline-none shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] transition-shadow duration-300">
 											{/* White Sweep Fill */}
 											<div className="absolute inset-0 bg-white origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.5,0,0,1)] rounded-full"></div>
 
@@ -440,7 +442,7 @@ export default function Home() {
 												</div>
 
 												{/* Content Area - Subtly Faded Card */}
-												<div className="ml-8 md:ml-0 w-full relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-zinc-800/20 to-transparent border-t border-zinc-700/50 transition-all duration-500 hover:bg-zinc-800/40 hover:-translate-y-1">
+												<div className="ml-8 md:ml-0 flex-1 relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-zinc-800/20 to-transparent border-t border-zinc-700/50 transition-all duration-500 hover:bg-zinc-800/40 hover:-translate-y-1">
 													<div className="mb-4 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 shadow-sm">
 														<span className="text-zinc-500 text-[10px] uppercase tracking-widest">2006 — 2016</span>
 													</div>
@@ -461,7 +463,7 @@ export default function Home() {
 												</div>
 
 												{/* Content Area - Illuminated Card */}
-												<div className="ml-8 md:ml-0 w-full relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-emerald-500/10 to-transparent border-t border-emerald-500/40 transition-all duration-500 hover:bg-emerald-500/15 hover:-translate-y-1">
+												<div className="ml-8 md:ml-0 flex-1 relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-emerald-500/10 to-transparent border-t border-emerald-500/40 transition-all duration-500 hover:bg-emerald-500/15 hover:-translate-y-1">
 													<div className="hidden md:block absolute -top-8 left-1/2 w-[1px] h-8 bg-gradient-to-b from-emerald-500/40 to-transparent -translate-x-1/2"></div>
 													<div className="mb-4 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
 														<span className="text-emerald-400 text-[10px] uppercase tracking-widest">2016 — 2020</span>
@@ -483,7 +485,7 @@ export default function Home() {
 												</div>
 
 												{/* Content Area - Subtly Faded Card */}
-												<div className="ml-8 md:ml-0 w-full relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-zinc-800/20 to-transparent border-t border-zinc-700/50 transition-all duration-500 hover:bg-zinc-800/40 hover:-translate-y-1">
+												<div className="ml-8 md:ml-0 flex-1 relative flex flex-col items-start md:items-center text-left md:text-center p-6 md:p-8 rounded-3xl bg-gradient-to-b from-zinc-800/20 to-transparent border-t border-zinc-700/50 transition-all duration-500 hover:bg-zinc-800/40 hover:-translate-y-1">
 													<div className="mb-4 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 shadow-sm">
 														<span className="text-zinc-500 text-[10px] uppercase tracking-widest">2020 — 2024</span>
 													</div>
@@ -733,9 +735,9 @@ export default function Home() {
 				{/* Seventh Section - Testimonials */}
 				<section className="relative z-0 w-full max-w-[170vh] -mt-10">
 					<div className="relative w-full aspect-auto">
-						<div className="relative w-full filter drop-shadow-2xl pointer-events-none">
+						<div className="relative w-full pointer-events-none">
 							<div
-								className="w-full bg-zinc-800 relative overflow-hidden flex flex-col pointer-events-auto shadow-[0_0_50px_rgba(16,185,129,0.05)]"
+								className="w-full bg-zinc-800 relative overflow-hidden flex flex-col pointer-events-auto"
 								style={{ clipPath: 'url(#testimonials-shape)' }}
 							>
 								{/* Premium Deep Background Layer */}
@@ -756,6 +758,11 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
+				</section>
+
+				{/* Eighth Section - Contact Me */}
+				<section className="relative z-10 w-full max-w-[170vh] mt-12 md:mt-24">
+					<ContactSection />
 				</section>
 			</div>
 		</main>
